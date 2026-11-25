@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="440" viewBox="0 0 1200 440"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Kartikeya Rajderkar</title>
+  <desc id="desc">Deep learning for CT scans, and a child-sized prosthetic hand whose grip is chosen by a palm camera, triggered by forearm EMG, and switched by voice. Three signal lanes (EMG, vision, voice) feed a 3D-printed tendon-driven hand; the readout shows the chosen grip and the 10 N pinch cap.</desc>
+
+  <defs>
+    <clipPath id="frame">
+      <rect width="1200" height="440" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="440" rx="28" fill="#0f1623"/>
+
+  <g clip-path="url(#frame)">
+
+  <!-- ===== title block ===== -->
+  <g id="title-block" transform="translate(60 0)"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="0" y="78" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="20" fill="#8a97ab">UC San Diego · Baylor College of Medicine</text>
+
+    <text x="0" y="142" font-size="58" font-weight="700" fill="#eef2f7" letter-spacing="-1">Kartikeya Rajderkar</text>
+
+    <text x="0" y="198" font-size="27" fill="#c7d0dc">Deep learning for CT scans. A kid-sized</text>
+    <text x="0" y="234" font-size="27" fill="#c7d0dc">prosthetic hand on $50 of microcontrollers.</text>
+
+    <text x="0" y="296" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="19" fill="#8a97ab">now · R&amp;D lead, AI/ML-driven prosthetics</text>
+
+    <g id="house-rule">
+      <rect x="0" y="330" width="4" height="60" rx="2" fill="#5ce0c9"/>
+      <text x="20" y="354" font-size="24" fill="#eef2f7">House rule: voice alone never</text>
+      <text x="20" y="384" font-size="24" fill="#eef2f7">closes the hand on a child.</text>
+    </g>
+  </g>
+
+  <!-- ===== control board: three signal lanes -> ESP32 -> hand ===== -->
+  <g id="control-board" transform="translate(620 56)"
+     font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+
+    <!-- lane 1: EMG -->
+    <g id="lane-emg" transform="translate(0 0)">
+      <text x="0" y="20" font-size="22" font-weight="700" fill="#eef2f7">EMG</text>
+      <text x="58" y="20" font-size="18" fill="#8a97ab">forearm · executes</text>
+      <rect x="0" y="34" width="250" height="52" rx="8" fill="#141d2c" stroke="#1f2a3b"/>
+      <path id="lane-emg-trace" fill="none" stroke="#5ce0c9" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"
+            d="M8 62 L40 62 L52 56 L64 66 L78 60 L92 62 L104 38 L114 82 L124 44 L134 76 L144 50 L154 68 L166 60 L184 62 L198 58 L212 64 L228 60 L242 62"/>
+    </g>
+
+    <!-- lane 2: vision -->
+    <g id="lane-vision" transform="translate(0 100)">
+      <text x="0" y="20" font-size="22" font-weight="700" fill="#eef2f7">VISION</text>
+      <text x="92" y="20" font-size="18" fill="#8a97ab">palm camera · selects</text>
+      <rect x="0" y="34" width="250" height="52" rx="8" fill="#141d2c" stroke="#1f2a3b"/>
+      <g id="lane-vision-read">
+        <rect x="12" y="42" width="36" height="36" rx="4" fill="none" stroke="#5ce0c9" stroke-width="2.5"/>
+        <circle cx="30" cy="60" r="9" fill="#5ce0c9"/>
+        <text x="62" y="67" font-size="21" fill="#5ce0c9">round-thick</text>
+        <text x="206" y="67" font-size="18" fill="#8a97ab">3 cls</text>
+      </g>
+    </g>
+
+    <!-- lane 3: voice -->
+    <g id="lane-voice" transform="translate(0 200)">
+      <text x="0" y="20" font-size="22" font-weight="700" fill="#eef2f7">VOICE</text>
+      <text x="80" y="20" font-size="18" fill="#8a97ab">ESP-SR · sets mode</text>
+      <rect x="0" y="34" width="250" height="52" rx="8" fill="#141d2c" stroke="#1f2a3b"/>
+      <g id="lane-voice-read">
+        <g fill="#5ce0c9">
+          <rect x="12" y="54" width="4" height="12" rx="2"/>
+          <rect x="20" y="48" width="4" height="24" rx="2"/>
+          <rect x="28" y="42" width="4" height="36" rx="2"/>
+          <rect x="36" y="50" width="4" height="20" rx="2"/>
+          <rect x="44" y="56" width="4" height="8" rx="2"/>
+        </g>
+        <text x="62" y="67" font-size="21" fill="#5ce0c9">"grab"</text>
+        <text x="152" y="67" font-size="18" fill="#8a97ab">mode only</text>
+      </g>
+    </g>
+
+    <!-- wiring: lanes -> host -> hand -->
+    <g id="wiring" fill="none" stroke="#2c3a50" stroke-width="2">
+      <path d="M250 60 C 290 60, 290 160, 322 160"/>
+      <path d="M250 160 L322 160"/>
+      <path d="M250 260 C 290 260, 290 160, 322 160"/>
+      <path d="M352 160 L406 160"/>
+    </g>
+    <circle cx="337" cy="160" r="15" fill="#0f1623" stroke="#5ce0c9" stroke-width="2.5"/>
+    <text x="337" y="200" font-size="17" fill="#8a97ab" text-anchor="middle">ESP32-S3</text>
+
+    <!-- 3D-printed hand, tendon driven -->
+    <g id="hand" transform="translate(366 0)">
+      <!-- forearm cuff with servo spools -->
+      <rect x="48" y="226" width="104" height="64" rx="12" fill="#141d2c" stroke="#2c3a50" stroke-width="2"/>
+      <g fill="none" stroke="#8a97ab" stroke-width="2">
+        <circle cx="76" cy="258" r="8"/>
+        <circle cx="100" cy="258" r="8"/>
+        <circle cx="124" cy="258" r="8"/>
+      </g>
+      <!-- tendons (fishing line) -->
+      <g stroke="#3b4b63" stroke-width="1.5" fill="none">
+        <path d="M66 36 L66 218 L76 250"/>
+        <path d="M96 26 L96 218 L100 250"/>
+        <path d="M126 32 L126 218 L124 250"/>
+        <path d="M156 48 L156 218 L124 250"/>
+      </g>
+      <!-- palm -->
+      <rect x="40" y="118" width="130" height="100" rx="16" fill="#1b2638" stroke="#4a5b75" stroke-width="2"/>
+      <!-- palm camera -->
+      <circle cx="105" cy="168" r="11" fill="#0f1623" stroke="#5ce0c9" stroke-width="2.5"/>
+      <circle cx="105" cy="168" r="4" fill="#5ce0c9"/>
+      <!-- fingers: three printed segments each -->
+      <g fill="#1b2638" stroke="#4a5b75" stroke-width="2">
+        <!-- index -->
+        <rect x="54" y="30" width="24" height="30" rx="7"/>
+        <rect x="54" y="64" width="24" height="26" rx="7"/>
+        <rect x="54" y="94" width="24" height="24" rx="7"/>
+        <!-- middle -->
+        <rect x="84" y="20" width="24" height="32" rx="7"/>
+        <rect x="84" y="56" width="24" height="30" rx="7"/>
+        <rect x="84" y="90" width="24" height="28" rx="7"/>
+        <!-- ring -->
+        <rect x="114" y="26" width="24" height="30" rx="7"/>
+        <rect x="114" y="60" width="24" height="28" rx="7"/>
+        <rect x="114" y="92" width="24" height="26" rx="7"/>
+        <!-- pinky -->
+        <rect x="144" y="42" width="24" height="26" rx="7"/>
+        <rect x="144" y="72" width="24" height="22" rx="7"/>
+        <rect x="144" y="98" width="24" height="20" rx="7"/>
+        <!-- thumb -->
+        <g transform="rotate(-42 46 150)">
+          <rect x="22" y="124" width="26" height="30" rx="8"/>
+          <rect x="22" y="156" width="26" height="26" rx="8"/>
+        </g>
+      </g>
+      <!-- fingertip pressure sensors -->
+      <g fill="#5ce0c9">
+        <rect x="60" y="34" width="12" height="5" rx="2.5"/>
+        <rect x="90" y="24" width="12" height="5" rx="2.5"/>
+        <rect x="120" y="30" width="12" height="5" rx="2.5"/>
+        <rect x="150" y="46" width="12" height="5" rx="2.5"/>
+      </g>
+    </g>
+
+    <!-- readout -->
+    <g id="readout" transform="translate(0 304)">
+      <rect x="0" y="0" width="250" height="44" rx="8" fill="#5ce0c9"/>
+      <text x="14" y="29" font-size="21" font-weight="700" fill="#0f1623">grip → power wrap</text>
+      <text x="268" y="29" font-size="19" fill="#8a97ab">10 N pinch cap · FSR</text>
+    </g>
+  </g>
+
+  </g>
+</svg>
