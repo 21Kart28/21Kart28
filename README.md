@@ -2,9 +2,9 @@
   <a href="./assets/hero.svg"><img src="./assets/hero.gif" width="100%" alt="Kartikeya Rajderkar. I build ML systems end to end, from the training loop to the desktop app that runs the model. A training-loss curve descends across a dark dot grid and settles at an amber marker labeled converged."></a>
 </p>
 
-Hi, I'm Kartikeya. Cognitive science (ML track) plus a CS minor at UC San Diego, class of 2028.
+Hi, I'm Kartikeya. Cognitive science (ML track) plus a CS minor at UC San Diego, class of 2028. Studying intelligence, perception, and learning not only informs me on how to make my builds and systems smarter, it helps me pick up the skills snd knowledge faster! 
 
-I like owning the whole ML stack: label the data, train the model, then build the desktop tool so nobody runs it by chaining shell scripts. Last summer, in a children's hospital research lab, that meant a 3D U-Net for CT scans. Dice went from 0.64 to 0.90. The patients were mice.
+I like owning the whole ML stack: label the data, train the model, then build the desktop tool so nobody runs it by chaining shell scripts.
 
 ## Things I've built
 
@@ -12,4 +12,5 @@ I like owning the whole ML stack: label the data, train the model, then build th
 - **[depth-map](https://github.com/21Kart28/depth-map)** — CLI that asks one open question at a time and analyzes the answer. Its README says "Map, which isn't built yet," so it's named after the half that doesn't exist.
 - **Pediatric prosthetic hand** — 3D-printed and child-sized; a MobileNet picks the grip on $50 of microcontrollers. Private for now.
 
-Off the keyboard: cross-country running (5K in 18:58), Eagle Scout, and more Fusion 360 than I planned on.
+When I'm not building, learning, and researching you will find me surfing, fishing, cliff jumping, and having philosophical debates with my friends :)
+Reach out if you want to do hackatons tohether or join a team :) 
