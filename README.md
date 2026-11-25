@@ -1,5 +1,5 @@
-﻿<p align="center">
-  <img src="./assets/banner.svg" width="100%" alt="Hi, I'm Kartik. I'm getting really good at building ML systems. A painting of a graphics card overgrown with vines, flying on rocket boosters over a purple and orange mountain landscape at night.">
+<p align="center">
+  <img src="./assets/banner.svg" width="100%" alt="Hi, I'm Kartik. I'm getting really good at building ML systems. A painting of a graphics card overgrown with vines, flying on rocket boosters over a purple and orange mountain landscape at night, with an Om on the moon.">
 </p>
 
 Hi, I'm Kartikeya. Cognitive science (ML track) plus a CS minor at UC San Diego, class of 2028. Studying intelligence, perception, and learning doesn't only inform how I make my builds and systems smarter, it helps me pick up skills and knowledge faster!
